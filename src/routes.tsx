@@ -1,8 +1,10 @@
 import type { RouteObject } from 'react-router-dom'
 import Home from './pages/home'
-import Following from './pages/following'
+import Survey from './pages/survey'
 import NotFound from './pages/notFound'
-import QnrItem from 'pages/following/components/QnrItem'
+import QnrItem from 'pages/survey/components/QnrItem'
+import Result from 'pages/result'
+import PersonalInfo from 'pages/survey/components/PersonalInfo'
 
 const routes: RouteObject[] = [
     {
@@ -11,14 +13,23 @@ const routes: RouteObject[] = [
         children: [],
     },
     {
-        path: '/following',
-        element: <Following />,
+        path: '/survey',
+        element: <Survey />,
         children: [
             {
-                path: '/following/:item',
+                path: '/survey/personalInfo',
+                element: <PersonalInfo />,
+            },
+            {
+                path: '/survey/:item',
                 element: <QnrItem />,
             },
         ],
+    },
+    {
+        path: '/result',
+        element: <Result />,
+        children: [],
     },
     {
         path: '*',

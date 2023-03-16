@@ -6,7 +6,12 @@ type ContainerProps = {
 
 const QnrContainer = (props: ContainerProps) => {
     return (
-        <Container maxW="1024px" m={[0, 'auto']}>
+        <Container
+            maxW="1280px"
+            m={[0, 'auto']}
+            bgGradient="linear(to-br, gray.100, gray.400, gray.100, gray.400, gray.100)"
+            p={10}
+        >
             {props.children}
         </Container>
     )
