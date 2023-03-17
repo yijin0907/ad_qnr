@@ -70,7 +70,7 @@ const QnrRadio: React.FC<qnrOptionsProps> = ({ qnrId, qnrOptions }) => {
                     size="lg"
                     onClick={nextPageHandler}
                 >
-                    {qnrId === "Q07" ? "已完成，確認送出" : "下一題"}
+                    {qnrId === "Q07" ? "已完成" : "下一題"}
                 </Button>
             </CardFooter>
         </>
