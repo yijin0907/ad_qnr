@@ -23,11 +23,11 @@ const QnrItem: React.FC = () => {
                 variant="filled"
                 bgGradient="linear(to-br,orange.100, orange.300, orange.100, orange.300)"
                 borderRadius="50px"
+                my={32}
             >
                 <QnrInfo qnrId={qnrInfo.qnrId} topicInfo={qnrInfo.qnrContent} qnrDescription={qnrInfo.qnrDescription} />
 
                 <QnrRadio key={qnrInfo.qnrId} qnrId={qnrInfo.qnrId} qnrOptions={qnrInfo?.qnrOptions} />
-
             </Card>
         </>
     )

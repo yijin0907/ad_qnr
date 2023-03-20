@@ -14,11 +14,15 @@ import {
     Box,
     Stack,
     HStack,
+    Link,
+    Flex,
+    Spacer,
 } from '@chakra-ui/react' // verbose
-import { ArrowRightIcon, SunIcon } from '@chakra-ui/icons'
+import { ArrowRightIcon, SunIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 
 import QnrHeader from 'components/QnrHeader'
 import QnrContainer from 'components/QnrContainer'
+import QnrFooter from 'components/QnrFooter'
 
 const Home: React.FC = () => {
     const navigate = useNavigate()
@@ -26,8 +30,8 @@ const Home: React.FC = () => {
         <>
             <QnrHeader />
             <QnrContainer>
-                <Box>
-                    <HStack mb="12">
+                <Box mt={10}>
+                    <HStack mb={20}>
                         <SunIcon boxSize={7} color="#7928CA" />
                         <Heading size="lg" bgClip="text" bgGradient="linear(to-br, #7928CA, #FF0080)">
                             關於預立醫療決定，您應該知道的一些事：
@@ -61,7 +65,7 @@ const Home: React.FC = () => {
                                     size="lg"
                                     align="center"
                                     variant="elevated"
-                                    bgGradient="linear(to-br,cyan.100, cyan.400, cyan.100, cyan.400)"
+                                    bgGradient="linear(to-r,messenger.200, messenger.300, messenger.200, messenger.300)"
                                     borderRadius="50px"
                                     h="full"
                                 >
@@ -92,7 +96,7 @@ const Home: React.FC = () => {
                                     size="lg"
                                     align="center"
                                     variant="elevated"
-                                    bgGradient="linear(to-br,cyan.100, cyan.400, cyan.100, cyan.400)"
+                                    bgGradient="linear(to-r,messenger.200, messenger.300, messenger.200, messenger.300)"
                                     borderRadius="50px"
                                     h="full"
                                 >
@@ -126,7 +130,7 @@ const Home: React.FC = () => {
                                     size="lg"
                                     align="center"
                                     variant="elevated"
-                                    bgGradient="linear(to-br,cyan.100, cyan.400, cyan.100, cyan.400)"
+                                    bgGradient="linear(to-r,messenger.200, messenger.300, messenger.200, messenger.300)"
                                     borderRadius="50px"
                                     h="full"
                                 >
@@ -151,7 +155,7 @@ const Home: React.FC = () => {
                                     size="lg"
                                     align="center"
                                     variant="elevated"
-                                    bgGradient="linear(to-br,cyan.100, cyan.400, cyan.100, cyan.400)"
+                                    bgGradient="linear(to-r,messenger.200, messenger.300, messenger.200, messenger.300)"
                                     borderRadius="50px"
                                     h="full"
                                 >
@@ -180,31 +184,39 @@ const Home: React.FC = () => {
                                 </Card>
                             </Box>
                         </Stack>
-                        <SimpleGrid columns={1} mt={20}>
-                            <Box flex="1" textAlign="center" px={72} mb={10}>
-                                <Button
-                                    w="full"
-                                    h={20}
-                                    onClick={() => {
-                                        navigate('/survey/personalInfo')
-                                    }}
-                                    rightIcon={<ArrowRightIcon />}
-                                    bgGradient="linear(to-br,green.500, green.300, green.100,green.300,green.500)"
-                                    border="1px"
-                                    borderRadius="full"
-                                    _hover={{
-                                        bgGradient:
-                                            'linear(to-tl, orange.500, orange.300, orange.100,orange.300,orange.500)',
-                                    }}
-                                    borderColor="green.600"
-                                >
-                                    開始填寫
-                                </Button>
-                            </Box>
-                        </SimpleGrid>
+                        <Flex my={10}>
+                            <Spacer />
+                            <Text as="u" color="teal.600" fontSize="lg">
+                                <Link href="https://www.mohw.gov.tw/cp-16-44221-1.html" isExternal>
+                                    相關資訊請參閱衛生福利部網站
+                                    <ExternalLinkIcon mx="2px" />
+                                </Link>
+                            </Text>
+                        </Flex>
+                        <Box flex="1" textAlign="center" px={72} mb={10}>
+                            <Button
+                                w="full"
+                                h={20}
+                                onClick={() => {
+                                    navigate('/survey/personalInfo')
+                                }}
+                                rightIcon={<ArrowRightIcon />}
+                                bgGradient="linear(to-br,green.500, green.300, green.100,green.300,green.500)"
+                                border="1px"
+                                borderRadius="full"
+                                _hover={{
+                                    bgGradient:
+                                        'linear(to-tl, orange.500, orange.300, orange.100,orange.300,orange.500)',
+                                }}
+                                borderColor="green.600"
+                            >
+                                開始填寫
+                            </Button>
+                        </Box>
                     </SimpleGrid>
                 </Box>
             </QnrContainer>
+            <QnrFooter />
         </>
     )
 }

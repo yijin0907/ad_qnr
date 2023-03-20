@@ -20,8 +20,8 @@ import { addPersonalInfo, removePersonalInfo } from 'slices/qnrSlice'
 import QnrInfo from '../QnrInfo'
 
 const PersonalInfo: React.FC = () => {
-    const [name, setName] = useState("")
-    const [gender, setGender] = useState("1")
+    const [name, setName] = useState('')
+    const [gender, setGender] = useState('1')
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
 
@@ -38,13 +38,21 @@ const PersonalInfo: React.FC = () => {
                 variant="filled"
                 bgGradient="linear(to-br,orange.100, orange.300, orange.100, orange.300)"
                 borderRadius="50px"
+                my={32}
             >
                 <QnrInfo qnrId="個人基本資訊" topicInfo="請填入下列相關個人資訊：" qnrDescription="Q00" />
                 <CardBody bgGradient="linear(to-br,cyan.100, cyan.400, cyan.100, cyan.400)" px={20} py={10}>
                     <FormControl isRequired>
                         <SimpleGrid columns={2} spacingY="3em">
                             <FormLabel fontSize="md">姓名</FormLabel>
-                            <Input variant="filled" placeholder="姓名" size="sm" borderRadius="md" onChange={nameHandleChange} value={name} />
+                            <Input
+                                variant="filled"
+                                placeholder="姓名"
+                                size="sm"
+                                borderRadius="md"
+                                onChange={nameHandleChange}
+                                value={name}
+                            />
                             <FormLabel fontSize="md">性別</FormLabel>
                             <RadioGroup onChange={setGender} value={gender}>
                                 <Stack spacing={5} direction="row">

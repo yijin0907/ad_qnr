@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 import QnrContainer from 'components/QnrContainer'
 import QnrHeader from 'components/QnrHeader'
+import QnrFooter from 'components/QnrFooter'
 
 const Survey: React.FC = () => {
     // const navigate = useNavigate()
@@ -12,6 +13,7 @@ const Survey: React.FC = () => {
             <QnrContainer>
                 <Outlet />
             </QnrContainer>
+            <QnrFooter />
         </>
     )
 }

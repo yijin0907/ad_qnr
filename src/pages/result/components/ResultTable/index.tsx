@@ -12,9 +12,15 @@ const ResultTable: React.FC = () => {
 
     return (
         <>
-            <Box w='100%' bgGradient="linear(to-br,orange.100, orange.300, orange.100, orange.300)" borderRadius="50px" p="10">
-                <VStack spacing={10}>
-                    <Heading size="lg" bgClip="text" bgGradient="linear(to-r, #7928CA, #FF0080)">
+            <Box
+                w="100%"
+                bgGradient="linear(to-br,orange.100, orange.300, orange.100, orange.300)"
+                borderRadius="50px"
+                p={10}
+                my={32}
+            >
+                <VStack spacing={10} my={10}>
+                    <Heading size="lg" bgClip="text" bgGradient="linear(to-r, #7928CA, #FF0080)" my={10}>
                         {personalInfo[0][0]}
                         {personalInfo[1] === '1' ? '先生' : '小姐'}您好，您的選填結果如下表：
                     </Heading>
