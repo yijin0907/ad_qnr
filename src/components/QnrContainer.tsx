@@ -10,7 +10,8 @@ const QnrContainer = (props: ContainerProps) => {
             maxH="container"
             maxW="1280px"
             m={[0, 'auto']}
-            bgGradient="linear(to-br,#fdfcfb,#e2d1c3)"
+            bgColor="#E7ECEF"
+            // bgGradient="linear(to-br,#fdfcfb,#e2d1c3)"
             p={10}
             centerContent
         >

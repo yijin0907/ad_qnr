@@ -35,14 +35,16 @@ const PersonalInfo: React.FC = () => {
             <Card
                 w="full"
                 size="lg"
-                variant="filled"
-                bgGradient="linear(to-br,orange.100, orange.300, orange.100, orange.300)"
-                borderRadius="50px"
+                variant="outline"
+                border="2px"
+                borderColor="#6096BA"
+                // bgGradient="linear(to-br,orange.100, orange.300, orange.100, orange.300)"
+                borderRadius="20px"
                 my={32}
             >
                 <QnrInfo qnrId="個人基本資訊" topicInfo="請填入下列相關個人資訊：" qnrDescription="Q00" />
-                <CardBody bgGradient="linear(to-br,cyan.100, cyan.400, cyan.100, cyan.400)" px={20} py={10}>
-                    <FormControl isRequired>
+                <CardBody bgColor="#6096BA" px={20} py={10}>
+                    <FormControl isRequired color="whiteAlpha.900">
                         <SimpleGrid columns={2} spacingY="3em">
                             <FormLabel fontSize="md">姓名</FormLabel>
                             <Input
@@ -79,17 +81,21 @@ const PersonalInfo: React.FC = () => {
                         </SimpleGrid>
                     </FormControl>
                 </CardBody>
-                <CardFooter justify="space-around" flexWrap="wrap" p={10}>
+                <CardFooter justify="space-around" flexWrap="wrap" p={20}>
                     <Button
-                        colorScheme="green"
-                        variant="link"
+                        colorScheme="whiteAlpha"
+                        bgColor="#B9BAB8"
                         rightIcon={<ArrowRightIcon />}
                         size="lg"
-                        borderRadius="full"
+                        // borderRadius="full"
                         onClick={() => {
                             dispatch(addPersonalInfo(name))
                             dispatch(addPersonalInfo(gender))
                             navigate('/survey/Q01')
+                        }}
+                        _hover={{
+                            colorScheme: 'whiteAlpha',
+                            bgColor: '#6096BA',
                         }}
                     >
                         下一頁

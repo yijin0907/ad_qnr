@@ -5,6 +5,8 @@ import NotFound from './pages/notFound'
 import QnrItem from 'pages/survey/components/QnrItem'
 import Result from 'pages/result'
 import PersonalInfo from 'pages/survey/components/PersonalInfo'
+import CsQrcode from 'pages/result/components/CsQrcode'
+import ResultTable from 'pages/result/components/ResultTable'
 
 const routes: RouteObject[] = [
     {
@@ -29,7 +31,16 @@ const routes: RouteObject[] = [
     {
         path: '/result',
         element: <Result />,
-        children: [],
+        children: [
+            {
+                path: '/result/resulttable',
+                element: <ResultTable />,
+            },
+            {
+                path: '/result/csqrcode',
+                element: <CsQrcode />,
+            },
+        ],
     },
     {
         path: '*',

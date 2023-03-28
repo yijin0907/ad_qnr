@@ -5,11 +5,11 @@ const QnrHeader: React.FC = () => {
     const go = useNavigate()
     return (
         <>
-            <Container maxW="1280px" m={[0, 'auto']} p={10} bgGradient="linear(to-br,#c1dfc4, #deecdd)">
+            <Container maxW="1280px" m={[0, 'auto']} p={10} bgColor="#274C77">
                 <Image
                     src="/images/logo.svg"
                     alt="MedSig logo"
-                    boxSize="100px"
+                    boxSize="80px"
                     borderRadius="full"
                     onClick={() => go('/')}
                 />

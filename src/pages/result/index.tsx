@@ -1,4 +1,5 @@
-import ResultTable from './components/ResultTable'
+import { Outlet } from 'react-router-dom'
+// import ResultTable from './components/ResultTable'
 import QnrContainer from 'components/QnrContainer'
 import QnrHeader from 'components/QnrHeader'
 import QnrFooter from 'components/QnrFooter'
@@ -8,7 +9,7 @@ const Result: React.FC = () => {
         <>
             <QnrHeader />
             <QnrContainer>
-                <ResultTable />
+                <Outlet />
             </QnrContainer>
             <QnrFooter />
         </>

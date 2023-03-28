@@ -19,15 +19,16 @@ const QnrRadio: React.FC<qnrOptionsProps> = ({ qnrId, qnrOptions }) => {
 
     const nextPageHandler = () => {
         setQIdState('Q' + (parseInt(qIdState.slice(2), 10) + 1).toString().padStart(2, '0'))
-        dispatch(addAns({
-            qnrId: qnrId,
-            opId: optionValue
-        }))
+        dispatch(
+            addAns({
+                qnrId: qnrId,
+                opId: optionValue,
+            })
+        )
     }
 
     const previousPageHandler = () => {
         setQIdState('Q' + (parseInt(qIdState.slice(2), 10) - 1).toString().padStart(2, '0'))
-
     }
 
     useEffect(() => {
@@ -35,42 +36,50 @@ const QnrRadio: React.FC<qnrOptionsProps> = ({ qnrId, qnrOptions }) => {
         if (qIdState === 'Q00') {
             navigate(`/survey/personalInfo`)
         } else if (qIdState === 'Q08') {
-            navigate(`/result`)
+            navigate(`/result/resulttable`)
         } else {
             navigate(`/survey/${qIdState}`)
         }
     }, [qIdState, navigate, dispatch])
     return (
         <>
-            <CardBody bgGradient="linear(to-br,cyan.100, cyan.400, cyan.100, cyan.400)" px={20} py={10}>
-                <RadioGroup onChange={setOptionValue} value={optionValue}>
+            <CardBody bgColor="#6096BA" px={20} py={10}>
+                <RadioGroup onChange={setOptionValue} value={optionValue} color="whiteAlpha.900">
                     <Stack divider={<StackDivider />} spacing={8}>
                         {qnrOptions.map((v) => (
-                            <Radio key={v.opId} value={v.opId} size="md" colorScheme="green">
+                            <Radio key={v.opId} value={v.opId} size="md" colorScheme="whatsapp">
                                 {v.opContent}
                             </Radio>
                         ))}
                     </Stack>
                 </RadioGroup>
             </CardBody>
-            <CardFooter justify="space-around" flexWrap="wrap" p={10}>
+            <CardFooter justify="space-around" flexWrap="wrap" p={20}>
                 <Button
-                    colorScheme="green"
-                    variant="link"
+                    colorScheme="whiteAlpha"
+                    bgColor="#B9BAB8"
                     leftIcon={<ArrowLeftIcon />}
                     size="lg"
                     onClick={previousPageHandler}
+                    _hover={{
+                        colorScheme: 'whiteAlpha',
+                        bgColor: '#6096BA',
+                    }}
                 >
                     上一題
                 </Button>
                 <Button
-                    colorScheme="green"
-                    variant="link"
+                    colorScheme="whiteAlpha"
+                    bgColor="#B9BAB8"
                     rightIcon={<ArrowRightIcon />}
                     size="lg"
                     onClick={nextPageHandler}
+                    _hover={{
+                        colorScheme: 'whiteAlpha',
+                        bgColor: '#6096BA',
+                    }}
                 >
-                    {qnrId === "Q07" ? "已完成" : "下一題"}
+                    {qnrId === 'Q07' ? '已完成' : '下一題'}
                 </Button>
             </CardFooter>
         </>

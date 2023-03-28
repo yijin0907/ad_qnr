@@ -20,9 +20,11 @@ const QnrItem: React.FC = () => {
         <>
             <Card
                 size="lg"
-                variant="filled"
-                bgGradient="linear(to-br,orange.100, orange.300, orange.100, orange.300)"
-                borderRadius="50px"
+                variant="outline"
+                border="2px"
+                borderColor="#6096BA"
+                // bgGradient="linear(to-br,orange.100, orange.300, orange.100, orange.300)"
+                borderRadius="20px"
                 my={32}
             >
                 <QnrInfo qnrId={qnrInfo.qnrId} topicInfo={qnrInfo.qnrContent} qnrDescription={qnrInfo.qnrDescription} />

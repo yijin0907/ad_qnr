@@ -12,12 +12,12 @@ const QnrInfo: React.FC<qnrInfoProps> = ({ qnrId, topicInfo, qnrDescription }) =
 
     return (
         <>
-            <FormControl>
+            <FormControl color="#8B8C89">
                 <CardHeader p={10}>
                     <Flex justifyContent="right">
                         <HStack spacing={2}>
-                            <EditIcon boxSize={6} color="gray.500" />
-                            <Text fontSize="2xl" color="gray.500" as="b">
+                            <EditIcon boxSize={6} />
+                            <Text fontSize="2xl" as="b">
                                 {qnrId}
                             </Text>
                         </HStack>
@@ -25,7 +25,9 @@ const QnrInfo: React.FC<qnrInfoProps> = ({ qnrId, topicInfo, qnrDescription }) =
                     <FormLabel mt={30} fontSize="lg">
                         {topicInfo}
                     </FormLabel>
-                    {qId > 0 && qId < 7 ? <FormHelperText>{`《${qnrDescription}》`}</FormHelperText> : null}
+                    {qId > 0 && qId < 7 ? (
+                        <FormHelperText color="#b9bab8">{`《${qnrDescription}》`}</FormHelperText>
+                    ) : null}
                 </CardHeader>
             </FormControl>
         </>
