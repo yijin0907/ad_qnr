@@ -44,21 +44,19 @@ const Home: React.FC = () => {
                             variant="outline"
                             border="2px"
                             borderColor="#274C77"
-                            // bgGradient="linear(to-br,gray.100, gray.300, gray.100, gray.300, gray.100)"
                             borderRadius="20px"
                             h="full"
-                            _hover={{
-                                bgGradient: 'linear(to-br,#D0E6F8, #F5FAFD)',
-                            }}
+                            bg="#6096BA"
+                            _hover={{ bgGradient: 'linear(to-br, #6096BA, #A3CEF1, #6096BA, #A3CEF1, #6096BA)' }}
                         >
                             <CardHeader p={10}>
-                                <Heading size="md" color="blue.600">
+                                <Heading size="md" color="whiteAlpha.900">
                                     預立醫療決定(Advance Decision, AD)是什麼？
                                 </Heading>
                             </CardHeader>
-                            <Divider color="#274C77" border="1px" />
+                            <Divider color="#E7ECEF" border="1px" />
                             <CardBody p={12}>
-                                <Text fontSize="md" color="blue.700">
+                                <Text fontSize="md" color="whiteAlpha.800">
                                     預立醫療決定(Advance Decision,
                                     AD)是根據《病人自主權利法》所誕生的制度，讓人們藉由簽署「預立醫療決定書」，預先表達當自己處於疾病末期、永久昏迷等「特定臨床條件」時，有無接受「維持生命治療」、「人工營養或流體餵養」的意願。
                                 </Text>
@@ -72,22 +70,24 @@ const Home: React.FC = () => {
                                     variant="outline"
                                     border="2px"
                                     borderColor="#274C77"
-                                    // bgGradient="linear(to-r,messenger.200, messenger.300, messenger.200, messenger.300)"
                                     borderRadius="20px"
                                     h="full"
-                                    _hover={{ bgGradient: 'linear(to-br,#D0E6F8, #F5FAFD)' }}
+                                    bg="#6096BA"
+                                    _hover={{
+                                        bgGradient: 'linear(to-br, #6096BA, #A3CEF1, #6096BA, #A3CEF1, #6096BA)',
+                                    }}
                                 >
                                     <CardHeader p={10}>
-                                        <Heading size="md" color="blue.600">
+                                        <Heading size="md" color="whiteAlpha.900">
                                             什麼情況會使用到預立醫療決定書？
                                         </Heading>
                                     </CardHeader>
-                                    <Divider color="#274C77" border="1px" />
+                                    <Divider color="#E7ECEF" border="1px" />
                                     <CardBody p={12}>
-                                        <Text fontSize="md" mb={5} color="blue.700">
+                                        <Text fontSize="md" mb={5} color="whiteAlpha.800">
                                             只有當病人處於以下「特定臨床條件」時，才會啟動預立醫療決定：
                                         </Text>
-                                        <OrderedList color="blue.700">
+                                        <OrderedList color="whiteAlpha.800">
                                             <ListItem>末期病人。</ListItem>
                                             <ListItem>處於不可逆轉之昏迷狀況。</ListItem>
                                             <ListItem>永久植物人狀態。</ListItem>
@@ -106,22 +106,24 @@ const Home: React.FC = () => {
                                     variant="outline"
                                     border="2px"
                                     borderColor="#274C77"
-                                    // bgGradient="linear(to-r,messenger.200, messenger.300, messenger.200, messenger.300)"
                                     borderRadius="20px"
                                     h="full"
-                                    _hover={{ bgGradient: 'linear(to-br,#D0E6F8, #F5FAFD)' }}
+                                    bg="#6096BA"
+                                    _hover={{
+                                        bgGradient: 'linear(to-br, #6096BA, #A3CEF1, #6096BA, #A3CEF1, #6096BA)',
+                                    }}
                                 >
                                     <CardHeader p={10}>
-                                        <Heading size="md" color="blue.600">
+                                        <Heading size="md" color="whiteAlpha.900">
                                             什麼是「維持生命治療」？
                                         </Heading>
                                     </CardHeader>
-                                    <Divider color="#274C77" border="1px" />
+                                    <Divider color="#E7ECEF" border="1px" />
                                     <CardBody p={12}>
-                                        <Text fontSize="md" color="blue.700" mb={5}>
+                                        <Text fontSize="md" color="whiteAlpha.900" mb={5}>
                                             維持生命治療是指單純以人工方式延續生命，而不是針對疾病進行治療。如果依當時醫療水準已確認無法治癒病人的疾病時，可以藉由維持生命治療延續病人的生命。
                                         </Text>
-                                        <OrderedList color="blue.700">
+                                        <OrderedList color="whiteAlpha.800">
                                             <ListItem>心肺復甦術，包括：心臟按壓、人工呼吸、心臟電擊等。</ListItem>
                                             <ListItem>機械式維生系統，如：葉克膜、呼吸器等。</ListItem>
                                             <ListItem>血液製品（輸血）。</ListItem>
@@ -143,22 +145,24 @@ const Home: React.FC = () => {
                                     variant="outline"
                                     border="2px"
                                     borderColor="#274C77"
-                                    // bgGradient="linear(to-r,messenger.200, messenger.300, messenger.200, messenger.300)"
                                     borderRadius="20px"
                                     h="full"
-                                    _hover={{ bgGradient: 'linear(to-br,#D0E6F8, #F5FAFD)' }}
+                                    bg="#6096BA"
+                                    _hover={{
+                                        bgGradient: 'linear(to-br, #6096BA, #A3CEF1, #6096BA, #A3CEF1, #6096BA)',
+                                    }}
                                 >
                                     <CardHeader p={10}>
-                                        <Heading size="md" color="blue.600">
+                                        <Heading size="md" color="whiteAlpha.900">
                                             什麼是「人工營養與流體餵養」？
                                         </Heading>
                                     </CardHeader>
-                                    <Divider color="#274C77" border="1px" />
+                                    <Divider color="#E7ECEF" border="1px" />
                                     <CardBody p={12}>
-                                        <Text fontSize="md" mb={5} color="blue.700">
+                                        <Text fontSize="md" mb={5} color="whiteAlpha.800">
                                             人工營養及流體餵養是指透過導管或其他侵入性措施，為病人餵養食物與水分。
                                         </Text>
-                                        <Text fontSize="md" color="blue.700">
+                                        <Text fontSize="md" color="whiteAlpha.800">
                                             如：鼻胃管、靜脈注射、胃造口等。
                                         </Text>
                                     </CardBody>
@@ -171,22 +175,24 @@ const Home: React.FC = () => {
                                     variant="outline"
                                     border="2px"
                                     borderColor="#274C77"
-                                    // bgGradient="linear(to-r,messenger.200, messenger.300, messenger.200, messenger.300)"
-                                    borderRadius="10px"
+                                    borderRadius="20px"
                                     h="full"
-                                    _hover={{ bgGradient: 'linear(to-br,#D0E6F8, #F5FAFD)' }}
+                                    bg="#6096BA"
+                                    _hover={{
+                                        bgGradient: 'linear(to-br, #6096BA, #A3CEF1, #6096BA, #A3CEF1, #6096BA)',
+                                    }}
                                 >
                                     <CardHeader p={10}>
-                                        <Heading size="md" color="blue.600">
+                                        <Heading size="md" color="whiteAlpha.900">
                                             誰可以預立醫療決定？
                                         </Heading>
                                     </CardHeader>
-                                    <Divider color="#274C77" border="1px" />
+                                    <Divider color="#E7ECEF" border="1px" />
                                     <CardBody p={12}>
-                                        <Text fontSize="md" mb={5} color="blue.700">
+                                        <Text fontSize="md" mb={5} color="whiteAlpha.800">
                                             預立醫療決定的人，在《病人自主權利法》上稱之為「意願人」，需要具備以下條件：
                                         </Text>
-                                        <OrderedList color="blue.700">
+                                        <OrderedList color="whiteAlpha.800">
                                             <ListItem>
                                                 法律上的完全行為能力人，包含以下兩種：
                                                 <UnorderedList>
